@@ -1,0 +1,87 @@
+1.0
+
+-- created Player Script. Player can jump, shoot, and move between rails.
+
+-- added Rail movement. Player occupies one rail at a time and can only move between three Rails. clamped movement so Player moves the same distance every time.
+
+-- added Jump and Jump Charge. The Player charges their Jump power by holding down the button, and jumps when the button is released.
+
+1.1
+
+-- fiddled with NPC locations and sizes. add NPC "spawn" points. gameManager calculates how far the Player is and spawns as appropriate? should make NPC prefabs (ie, fill one row, fill two row, jump hazard, jump+rail hazards)
+
+-- increase max speed over levels?
+
+-- added HP and take damage function. Player dies if they hit too many NPC's (and must respawn?). Player also becomes intangible momentarily after taking a hit or when moving
+
+-- fiddled with Player movement. Player cannot make multiple inputs twice in a row. Player can only move when Alive. etc
+
+-- added ticking Clock and Useless Points trackers
+
+-- added a Speed up function so the Player can increase their maxspeed
+
+1.2
+
+-- added Skateboard object for the Player to ride on
+
+-- added rotation properties when moving (skateboard rotates in the direction moved 45 degrees)
+
+-- added Tricks Kickflip and Pop Shove It. added tricking logic. Player can perform tricks while in midair. tricking rotates the skateboard
+
+-- added rotation to the player if they jump while speeding up
+
+-- added "flashing" effect when taking damage
+
+-- added Camera.cs using Gregoryl's "Official Unity Forum Post" locking Cinemachine camera on the Y and Z axis
+
+1.3
+
+-- added "Useless Points" UI TMP UI. linked it to uselessPoints int. ditto Time
+
+-- added MoveCharge so Player can move one (1) time while airborne
+
+-- removed rotating during acceleration + accelerated jump (replace with animation)
+
+-- changed acceleration to OnKeyUp and added additional logic
+
+1.4
+
+-- taking damage now reduces points. points cannot go below zero
+
+-- fixed movement (?). Ienumerator Move now uses FixedUpdate and waits until fixedUpdate counts to 5. fixed Rail logic
+
+-- TO-DO: Fix "sinking" issue (reset y position?) and streamline raycast (Player is considered grounded while mid-jump because the raycast is still hitting thte ground)
+
+1.5
+
+-- added CigaretteObject and Cigarette Smoke TrailRenderer. Added a new script, ThisSucksPlayerGraphics.cs to control Player aesthetics. added rudimentary cigarette controller (doesn't even work; must investigate TrailRenderer vs ParticleSystem etc more)
+
+-- added a rough Skateboard 3D model
+
+1.6
+
+-- "refactored" UI elements into a separate script
+
+1.7
+
+-- added Powerup logic. Added "Health Up" powerup to recover lost HP
+
+1.8 
+
+-- began refactoring code based on what I learnt in 2022 Tri 3
+
+-- began splitting up Player into Model / ModelView / View
+
+-- UI now listens to events
+
+-- removed "Time" from UI
+
+-- added Spline package
+
+1.9
+
+-- added Gravity.cs and NPCDeathState.cs, both lifted from DollPlatformer. NPC's will jump up, a random direction, and spin upon death. Then, gravity is applied so that they fall out of sight
+
+-- added NPCStateManager and added Idle and Death states to regular NPCs
+
+-- added Interface INPC. Added DetectionSphere.cs to Player. Player now searches for NPCs and triggers their death when hit

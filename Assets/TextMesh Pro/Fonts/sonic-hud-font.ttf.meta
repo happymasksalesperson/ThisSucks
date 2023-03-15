@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac091ea78abb79349b7bc6b983485ca9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sonic HUD Font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 974eae926c2e91a4091b92575eacef5a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
