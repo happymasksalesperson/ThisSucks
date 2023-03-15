@@ -8,6 +8,8 @@ public class NPCDeathState : MonoBehaviour
 {
     private Rigidbody rb;
 
+    private NPCStateManager stateManager;
+
     //how much rb spins
     [SerializeField] private float torque;
     
@@ -26,6 +28,7 @@ public class NPCDeathState : MonoBehaviour
 
     private void OnEnable()
     {
+        stateManager = GetComponent<NPCStateManager>();
         rb = GetComponent<Rigidbody>();
         gravity = GetComponent<Gravity>();
 
@@ -54,6 +57,12 @@ public class NPCDeathState : MonoBehaviour
     private IEnumerator Die()
     {
         yield return new WaitForSeconds(5);
-            Destroy(gameObject);
+        {
+            gravity.enabled = false;
+            
+            gameObject.SetActive(false);
+            
+            stateManager.ChangeStateString("idle");
+        }
     }
 }

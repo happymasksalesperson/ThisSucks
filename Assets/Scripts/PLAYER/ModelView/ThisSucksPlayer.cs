@@ -139,7 +139,6 @@ public class ThisSucksPlayer : MonoBehaviour
     void Update()
    
     { 
-        Debug.Log(HP);
         if (isAlive) {
             if (canMove)
             {

@@ -85,3 +85,9 @@
 -- added NPCStateManager and added Idle and Death states to regular NPCs
 
 -- added Interface INPC. Added DetectionSphere.cs to Player. Player now searches for NPCs and triggers their death when hit
+
+-- added NPC Spawner to spawn NPCs. Spawner also using poolign for efficiency! 
+
+-- fixed some resultant errors
+
+TO-DO: change Death State to be 360 degrees

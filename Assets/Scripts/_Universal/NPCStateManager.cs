@@ -41,6 +41,10 @@ public class NPCStateManager : MonoBehaviour
     {
         switch (state)
         {
+            case ("idle"):
+                ChangeState(idleState);
+                break;
+
             case ("death"):
                 ChangeState(deathState);
                 break;
